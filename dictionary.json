@@ -1,0 +1,298 @@
+[
+    {
+        "bija_word": "Adaru",
+        "english_word": "Red",
+        "arabic_word": "أحمر",
+        "notes": "Adjective, masculine",
+        "image_file": "red.png",
+        "audio_file": "adaru.mp3"
+    },
+    {
+        "bija_word": "Angwiil",
+        "english_word": "Ear",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "ear.png",
+        "audio_file": "angwiil.mp3"
+    },
+    {
+        "bija_word": "Eera",
+        "english_word": "White",
+        "arabic_word": "أبيض",
+        "notes": "Adjective, masculine",
+        "image_file": "white.png",
+        "audio_file": "adaru.mp3"
+    },
+    {
+        "bija_word": "Giig",
+        "english_word": "Go",
+        "arabic_word": "ذَهَبَ",
+        "notes": "Verb, stem",
+        "image_file": null,
+        "audio_file": "giig.mp3"
+    },
+    {
+        "bija_word": "Ginuuf",
+        "english_word": "Nose",
+        "arabic_word": "أنف",
+        "notes": "Noun, masculine.",
+        "image_file": "ginuuf.png",
+        "audio_file": "ginuuf.mp3"
+    },
+    {
+        "bija_word": "Gw'ad",
+        "english_word": "Eye",
+        "arabic_word": "عين",
+        "notes": "Noun,masculine",
+        "image_file": "eye.png",
+        "audio_file": "gw'ad.mp3"
+    },
+    {
+        "bija_word": "Hadal",
+        "english_word": "Black",
+        "arabic_word": "أسود",
+        "notes": "Adjective, masculine",
+        "image_file": "black.png",
+        "audio_file": "hadal.mp3"
+    },
+    {
+        "bija_word": "Hataay",
+        "english_word": "Horse",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "horse.png",
+        "audio_file": "hataay.mp3"
+    },
+    {
+        "bija_word": "Hindiib",
+        "english_word": "Tree / Wood",
+        "arabic_word": "شجرة.  خشب",
+        "notes": "Noun, masculine.\nRefers generally to living trees or cut structural timber.",
+        "image_file": "tree.png",
+        "audio_file": "hindiib.mp3"
+    },
+    {
+        "bija_word": "Kan",
+        "english_word": "Know",
+        "arabic_word": "عرف",
+        "notes": "<b>Verb Conjugation (Present Tense)</b><br><br><table border=\"1\" style=\"border-color:#009688; width:100%;\"><tr><td><b>Pronoun</b></td><td><b>Conjugation</b></td></tr><tr><td>Ani (I) ()</td><td>Akteen</td></tr><tr><td>Baruuk (You m.)</td><td>Tikteena</td></tr><tr><td>Baruu (He)</td><td>Ikteen</td></tr><tr><td>Batuu (She)</td><td>tikteen</td></tr><tr><td>Hinin (We)</td><td>Nikteen</td></tr></table>",
+        "image_file": "",
+        "audio_file": "kan.mp3"
+    },
+    {
+        "bija_word": "Karaay",
+        "english_word": "Haenna",
+        "arabic_word": null,
+        "notes": "Noun, masculine singular.",
+        "image_file": "karaay.png",
+        "audio_file": "karaay.mp3"
+    },
+    {
+        "bija_word": "Kilaayt",
+        "english_word": "Bird",
+        "arabic_word": null,
+        "notes": "Noun, feminine",
+        "image_file": "bird.png",
+        "audio_file": "kilaayt.mp3"
+    },
+    {
+        "bija_word": "Kurib",
+        "english_word": "Elephant",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "elephant.png",
+        "audio_file": "kurib.mp3"
+    },
+    {
+        "bija_word": "Laga",
+        "english_word": "Calf",
+        "arabic_word": "عجل",
+        "notes": "Noun, masculine singular.",
+        "image_file": "laga.png",
+        "audio_file": "laga.mp3"
+    },
+    {
+        "bija_word": "M'ari",
+        "english_word": "Food",
+        "arabic_word": "طعام",
+        "notes": "Noun,feminine. M'ariit",
+        "image_file": "m'ari.png",
+        "audio_file": "m'ari.mp3"
+    },
+    {
+        "bija_word": "Meek",
+        "english_word": "Donkey",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "donkey.png",
+        "audio_file": "meek.mp3"
+    },
+    {
+        "bija_word": "N'aayt",
+        "english_word": "Goat",
+        "arabic_word": null,
+        "notes": "Noun, feminine",
+        "image_file": "goat.png",
+        "audio_file": "n'aayt.mp3"
+    },
+    {
+        "bija_word": "N'eet",
+        "english_word": "Fire",
+        "arabic_word": null,
+        "notes": "Noun, feminine",
+        "image_file": "fire.png",
+        "audio_file": "n'eet.mp3"
+    },
+    {
+        "bija_word": "Oor",
+        "english_word": "Boy",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "boy.png",
+        "audio_file": "oor.mp3"
+    },
+    {
+        "bija_word": "Oot",
+        "english_word": "Girl",
+        "arabic_word": null,
+        "notes": "Noun, feminine",
+        "image_file": "woman.png",
+        "audio_file": "takat.mp3"
+    },
+    {
+        "bija_word": "Ra",
+        "english_word": "Oryx",
+        "arabic_word": "مها",
+        "notes": "Noun, masculine singular.",
+        "image_file": "ra.png",
+        "audio_file": "ra.mp3"
+    },
+    {
+        "bija_word": "Ragad",
+        "english_word": "Leg",
+        "arabic_word": "رجل",
+        "notes": "Noun, masculine",
+        "image_file": "leg.png",
+        "audio_file": "ragad.mp3"
+    },
+    {
+        "bija_word": "Ri",
+        "english_word": "Well",
+        "arabic_word": "بئر",
+        "notes": "Noun,masculine",
+        "image_file": "well.png",
+        "audio_file": "ri.mp3"
+    },
+    {
+        "bija_word": "Riba",
+        "english_word": "Hill",
+        "arabic_word": "جبل",
+        "notes": "Noun, masculine",
+        "image_file": "hill.png",
+        "audio_file": "riba.mp3"
+    },
+    {
+        "bija_word": "Sar",
+        "english_word": "Water skin",
+        "arabic_word": "قربة",
+        "notes": "Noun, masculine singular.",
+        "image_file": "sar.png",
+        "audio_file": "sar.mp3"
+    },
+    {
+        "bija_word": "Si",
+        "english_word": "Liver",
+        "arabic_word": "كبد",
+        "notes": "Noun,feminine. Seet",
+        "image_file": "liver.png",
+        "audio_file": "si.mp3"
+    },
+    {
+        "bija_word": "Siit",
+        "english_word": "Soup",
+        "arabic_word": "شوربة",
+        "notes": "Noun, masculine.",
+        "image_file": "siit.png",
+        "audio_file": "siit.mp3"
+    },
+    {
+        "bija_word": "Tak",
+        "english_word": "Man",
+        "arabic_word": "رجل",
+        "notes": "Noun, masculine.\nExample: 'U-tak' (The man).\nPlural forms change internally via vowel shifts.",
+        "image_file": "man.png",
+        "audio_file": "tak.mp3"
+    },
+    {
+        "bija_word": "Takat",
+        "english_word": "Woman",
+        "arabic_word": "إمرأة",
+        "notes": "Noun, feminine.\nExample: 'T-takat' (The woman).",
+        "image_file": "woman.png",
+        "audio_file": "takat.mp3"
+    },
+    {
+        "bija_word": "Tiibalaay/Tiibalaayt",
+        "english_word": "Finger",
+        "arabic_word": "أصبع",
+        "notes": "Noun, masculine",
+        "image_file": "finger.png",
+        "audio_file": "tiibalaay.mp3"
+    },
+    {
+        "bija_word": "Waw",
+        "english_word": "Bees",
+        "arabic_word": "نحل",
+        "notes": "Noun, feminine plural. Wawt.",
+        "image_file": "waw.png",
+        "audio_file": "waw.mp3"
+    },
+    {
+        "bija_word": "Yaas",
+        "english_word": "Dog",
+        "arabic_word": "كلب",
+        "notes": "Noun, masculine",
+        "image_file": "dog.png",
+        "audio_file": "yaas.mp3"
+    },
+    {
+        "bija_word": "Yaf",
+        "english_word": "Mouth",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "mouth.png",
+        "audio_file": "yaf.mp3"
+    },
+    {
+        "bija_word": "Yam",
+        "english_word": "Water",
+        "arabic_word": "ماء",
+        "notes": "Noun, masculine",
+        "image_file": "water.png",
+        "audio_file": "yam.mp3"
+    },
+    {
+        "bija_word": "Yhaam",
+        "english_word": "Leopard",
+        "arabic_word": null,
+        "notes": "Noun, masculine",
+        "image_file": "leopard.png",
+        "audio_file": "yhaam.mp3"
+    },
+    {
+        "bija_word": "Yint",
+        "english_word": "Sun",
+        "arabic_word": "شمس",
+        "notes": "Noun, feminine.\nCrucial atmospheric root entity in Cushitic natural lexicons.",
+        "image_file": "sun.png",
+        "audio_file": "yint.mp3"
+    },
+    {
+        "bija_word": "dabalu",
+        "english_word": "Small/Little",
+        "arabic_word": "صغير",
+        "notes": "Adjective, masculine",
+        "image_file": "",
+        "audio_file": "dabalu.mp3"
+    }
+]
