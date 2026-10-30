@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bidhaawyeet Mobile Lexicon</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            background-color: #0a2240; color: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-user-select: none; user-select: none;
+        }
+        header {
+            background-color: #0e2e56; padding: 15px; text-align: center;
+            font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid #009688;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .search-container { padding: 12px; position: sticky; top: 0; background-color: #0a2240; z-index: 10; }
+        #searchInput {
+            width: 100%; box-sizing: border-box; background-color: #12355b; color: white;
+            border: 2px solid #009688; border-radius: 8px; padding: 12px; font-size: 1rem; outline: none;
+        }
+        .main-content { display: flex; flex-direction: column; padding: 0 12px 20px 12px; gap: 15px; }
+        .card { background-color: #12355b; border: 1px solid #009688; border-radius: 8px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+        #wordIndexList {
+            list-style: none; padding: 0; margin: 0; max-height: 200px; overflow-y: auto;
+            background-color: #12355b; border: 1px solid #009688; border-radius: 8px; display: none;
+        }
+        #wordIndexList li { padding: 12px 15px; border-bottom: 1px solid #1a3a60; font-size: 0.95rem; cursor: pointer; }
+        #wordIndexList li:active { background-color: #009688; }
+        .word-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #009688; padding-bottom: 8px; margin-bottom: 12px; }
+        .word-title { color: #009688; font-size: 1.4rem; font-weight: bold; margin: 0; }
+        .lang-row { margin: 10px 0; font-size: 1.05rem; }
+        .arabic-text { font-size: 1.3rem; color: #ffffff; direction: rtl; text-align: right; margin-top: 5px; }
+        .media-container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        #imageBox {
+            width: 100%; max-width: 280px; height: 180px; background-color: #0a2240;
+            border: 2px dashed #009688; border-radius: 6px; display: flex; justify-content: center; align-items: center;
+            font-size: 0.9rem; color: #8899aa; overflow: hidden;
+        }
+        #imageBox img { width: 100%; height: 100%; object-fit: cover; }
+        #audioBtn {
+            width: 100%; background-color: #ff5722; color: white; border: none; border-radius: 6px;
+            padding: 12px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        #audioBtn:active { background-color: #e64a19; }
+        #audioBtn:disabled { background-color: #445566; color: #8899aa; cursor: not-allowed; box-shadow: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        td, th { border: 1px solid #009688; padding: 8px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>Bidhaawyeet Lexicon</header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search word..." autocomplete="off">
+        <ul id="wordIndexList"></ul>
+    </div>
+    <div class="main-content">
+        <div class="card">
+            <div class="word-header"><h2 id="displayBija" class="word-title">🔍 Search a word</h2></div>
+            <div class="lang-row"><b>English:</b> <span id="displayEnglish">-</span></div>
+            <div class="lang-row" style="margin-top: 15px;"><div style="font-weight: bold; margin-bottom: 2px;">العربية:</div><div id="displayArabic" class="arabic-text">-</div></div>
+        </div>
+        <div class="card media-container">
+            <div id="imageBox">No Image Loaded</div>
+            <button id="audioBtn" disabled>🔊 Play Pronunciation</button>
+        </div>
+        <div class="card">
+            <div style="font-weight: bold; border-bottom: 1px solid #009688; padding-bottom: 4px;">Grammar & Notes</div>
+            <div id="displayNotes" style="font-size: 0.95rem; line-height: 1.4; margin-top: 10px; white-space: pre-wrap;">Linguistic details will appear here...</div>
+        </div>
+    </div>
+    <script>
+        let dictionary = [];
+        let currentAudio = null;
+        fetch('dictionary.json')
+            .then(response => response.json())
+            .then(data => { dictionary = data; populateIndex(dictionary); })
+            .catch(err => console.error("Error loading dictionary data map:", err));
+        const searchInput = document.getElementById('searchInput');
+        const indexList = document.getElementById('wordIndexList');
+        const audioBtn = document.getElementById('audioBtn');
+        function populateIndex(words) {
+            indexList.innerHTML = '';
+            words.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.bija_word;
+                li.addEventListener('click', () => {
+                    searchInput.value = item.bija_word;
+                    indexList.style.display = 'none';
+                    displayWord(item);
+                });
+                indexList.appendChild(li);
+            });
+        }
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.trim().toLowerCase();
+            if (!query) { indexList.style.display = 'none'; return; }
+            const filtered = dictionary.filter(item => 
+                item.bija_word.toLowerCase().includes(query) ||
+                item.english_word.toLowerCase().includes(query) ||
+                (item.arabic_word && item.arabic_word.toLowerCase().includes(query))
+            );
+            if (filtered.length > 0) { populateIndex(filtered); indexList.style.display = 'block'; }
+            else { indexList.style.display = 'none'; }
+        });
+        function displayWord(item) {
+            document.getElementById('displayBija').textContent = `🔍 ${item.bija_word}`;
+            document.getElementById('displayEnglish').textContent = item.english_word;
+            document.getElementById('displayArabic').textContent = item.arabic_word || 'N/A';
+            document.getElementById('displayNotes').innerHTML = item.notes || 'None';
+            const imgBox = document.getElementById('imageBox');
+            if (item.image_file) { imgBox.innerHTML = `<img src="images/${item.image_file}" alt="${item.bija_word}">`; }
+            else { imgBox.innerHTML = 'No Image Loaded'; }
+            if (item.audio_file) { currentAudio = new Audio(`audio/${item.audio_file}`); audioBtn.disabled = false; }
+            else { currentAudio = null; audioBtn.disabled = true; }
+        }
+        audioBtn.addEventListener('click', () => {
+            if (currentAudio) { currentAudio.currentTime = 0; currentAudio.play().catch(e => alert("Audio playback restricted. Tap screen and try again.")); }
+        });
+        document.addEventListener('click', (e) => { if (e.target !== searchInput) { indexList.style.display = 'none'; } });
+    </script>
+</body>
+</html>
+
